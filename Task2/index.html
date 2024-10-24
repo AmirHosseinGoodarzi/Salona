@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salona - Task#2</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="card_container">
+      <form class="card_form" onsubmit="searchCardNumber(event)">
+        <p>
+          لطفا شماره کارت بانکی خود را وارد کرده و سپس روی جست‌وجو کلیک کنید:
+        </p>
+        <div class="inputs_wrapper" dir="ltr">
+          <input
+            type="text"
+            class="card_input_part"
+            id="part1"
+            placeholder="- - - -"
+            maxlength="4"
+            onkeyup="moveToNextInput(this)"
+            pattern="\d{4}"
+            required
+          />
+          <input
+            type="text"
+            class="card_input_part"
+            id="part2"
+            placeholder="- - - -"
+            maxlength="4"
+            onkeyup="moveToNextInput(this)"
+            pattern="\d{4}"
+            required
+          />
+          <input
+            type="text"
+            class="card_input_part"
+            id="part3"
+            placeholder="- - - -"
+            maxlength="4"
+            onkeyup="moveToNextInput(this)"
+            pattern="\d{4}"
+            required
+          />
+          <input
+            type="text"
+            class="card_input_part"
+            id="part4"
+            placeholder="- - - -"
+            maxlength="4"
+            pattern="\d{4}"
+            required
+          />
+        </div>
+        <p id="errorMessage"></p>
+        <div style="display: flex;justify-content: center; align-items: center; gap: 1rem;">
+          <button type="submit">
+            جست‌وجو
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 512 512"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M443.5 420.2L336.7 312.4c20.9-26.2 33.5-59.4 33.5-95.5 0-84.5-68.5-153-153.1-153S64 132.5 64 217s68.5 153 153.1 153c36.6 0 70.1-12.8 96.5-34.2l106.1 107.1c3.2 3.4 7.6 5.1 11.9 5.1 4.1 0 8.2-1.5 11.3-4.5 6.6-6.3 6.8-16.7.6-23.3zm-226.4-83.1c-32.1 0-62.3-12.5-85-35.2-22.7-22.7-35.2-52.9-35.2-84.9 0-32.1 12.5-62.3 35.2-84.9 22.7-22.7 52.9-35.2 85-35.2s62.3 12.5 85 35.2c22.7 22.7 35.2 52.9 35.2 84.9 0 32.1-12.5 62.3-35.2 84.9-22.7 22.7-52.9 35.2-85 35.2z"
+              ></path>
+            </svg>
+          </button>
+          <button
+            type="button"
+            class="outline"
+            id="form_reset_btn"
+            onclick="clearForm()"
+            style="display: none"
+          >
+            پاک کردن فرم
+          </button>
+        </div>
+      </form>
+      <div id="card_information" style="display: none;"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@persian-tools/persian-tools/build/persian-tools.umd.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
