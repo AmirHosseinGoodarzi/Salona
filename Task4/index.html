@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salona - Task#3</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="bg_video">
+      <video width="100%" height="100%" autoplay loop muted>
+        <source src="./assets/bg.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="scroll_blink">
+      <span class="mouse">
+        <span class="mouse_wheel"></span>
+      </span>
+      <p>اسکرول کنید</p>
+    </div>
+    <div class="bank_card_wrapper">
+      <div class="bank_card solid">
+        <div class="card_bg_overlay"></div>
+        <div class="bank_logo">
+          <img
+            width="100%"
+            height="auto"
+            src="./assets/saman_bank.png"
+            alt="بانک سامان"
+          />
+        </div>
+        <div class="card_chipset">
+          <img width="100%" height="auto" src="./assets/chip.png" alt="chip" />
+        </div>
+        <div
+          class="card_number"
+          dir="ltr"
+          onclick="copyCardNumber('6219 8610 1234 5678')"
+          title="برای کپی کردن کلیک کنید"
+        >
+          6219 8610 1234 5678
+        </div>
+        <div class="card_details">
+          <div class="card_owner">امیرحسین گودرزی</div>
+          <div class="card_info">
+            <div class="card_expiration">انقضاء: <b>1403/09</b></div>
+            <div class="card_cvv2">CVV2: <b>4557</b></div>
+          </div>
+        </div>
+      </div>
+      <div class="bank_card glass">
+        <div class="card_bg_overlay"></div>
+        <div class="bank_logo">
+          <img
+            width="100%"
+            height="auto"
+            src="./assets/saman_bank.png"
+            alt="بانک سامان"
+          />
+        </div>
+        <div class="card_chipset">
+          <img width="100%" height="auto" src="./assets/chip.png" alt="chip" />
+        </div>
+        <div
+          class="card_number"
+          dir="ltr"
+          onclick="copyCardNumber('6219 8610 1234 5678')"
+          title="برای کپی کردن کلیک کنید"
+        >
+          6219 8610 1234 5678
+        </div>
+        <div class="card_details">
+          <div class="card_owner">امیرحسین گودرزی</div>
+          <div class="card_info">
+            <div class="card_expiration">انقضاء: <b>1403/09</b></div>
+            <div class="card_cvv2">CVV2: <b>4557</b></div>
+          </div>
+        </div>
+      </div>
+      <div class="bank_card dark">
+        <div class="card_bg_overlay"></div>
+        <div class="bank_logo">
+          <img
+            width="100%"
+            height="auto"
+            src="./assets/saman_bank.png"
+            alt="بانک سامان"
+          />
+        </div>
+        <div class="card_chipset">
+          <img width="100%" height="auto" src="./assets/chip.png" alt="chip" />
+        </div>
+        <div
+          class="card_number"
+          dir="ltr"
+          onclick="copyCardNumber('6219 8610 1234 5678')"
+          title="برای کپی کردن کلیک کنید"
+        >
+          6219 8610 1234 5678
+        </div>
+        <div class="card_details">
+          <div class="card_owner">امیرحسین گودرزی</div>
+          <div class="card_info">
+            <div class="card_expiration">انقضاء: <b>1403/09</b></div>
+            <div class="card_cvv2">CVV2: <b>4557</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const copyCardNumber = (number) => {
+        navigator.clipboard
+          .writeText(number)
+          .then(() => {
+            alert("شماره کارت با موفقیت کپی شد.");
+          })
+          .catch((error) => {
+            alert("خطا در کپی کردن اطلاعات. لطفا مجددا تلاش نمایید");
+            console.error("Error copying text:", error);
+          });
+      };
+    </script>
+  </body>
+</html>

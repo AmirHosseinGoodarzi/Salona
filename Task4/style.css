@@ -1,0 +1,186 @@
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("../fonts/Vazirmatn-Regular.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Vazirmatn";
+  overflow-x: hidden;
+}
+body {
+  min-height: 100vh;
+  padding: 100px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(156deg, #fff, #f0f0f0);
+  color: #171717;
+  position: relative;
+}
+.bg_video {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.bg_video video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.bg_video::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  right: 0;
+}
+.scroll_blink {
+  position: fixed;
+  left: 2rem;
+  bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  text-align: center;
+  gap: 1rem;
+  color: white;
+}
+.mouse {
+  display: flex;
+  border: 2px solid white;
+  width: 23px;
+  height: 40px;
+  border-radius: 20px;
+}
+.mouse_wheel {
+  display: block;
+  margin: auto;
+  border-radius: 9999px;
+  background: white;
+  width: 2px;
+  height: 7px;
+  animation: move-wheel 1.7s linear infinite;
+}
+@keyframes move-wheel {
+  0% {
+    transform: translateY(-1.6rem);
+  }
+  50% {
+    transform: translateY(-0.6rem);
+  }
+  100% {
+    transform: translateY(-1.6rem);
+  }
+}
+.bank_card_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.card_bg_overlay {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: transparent;
+  border: 50px solid rgba(255, 255, 255, 0.1);
+  bottom: -250px;
+  right: -250px;
+  box-sizing: border-box;
+  position: absolute;
+}
+.card_bg_overlay::after {
+  content: "";
+  position: absolute;
+  height: 600px;
+  width: 600px;
+  border-radius: 50%;
+  background: transparent;
+  border: 30px solid rgba(255, 255, 255, 0.1);
+  bottom: -80px;
+  right: -110px;
+  box-sizing: border-box;
+}
+.bank_card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 270px;
+  width: 100%;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  color: #ffffffcc;
+  padding: 15px;
+}
+.bank_card.solid {
+  /* background: #28c6ff; */
+  background: linear-gradient(45deg, #0079a4, #28c6ff);
+  border-color: transparent;
+}
+.bank_card.dark {
+  background: #111;
+  color: #d2d2d2a5;
+}
+.bank_logo {
+  width: 170px;
+  align-self: flex-start;
+}
+.card_chipset {
+  width: 50px;
+  align-self: flex-end;
+}
+.card_number {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 5;
+}
+.card_details {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card_details .card_owner {
+  font-weight: bold;
+  font-size: 1.15rem;
+}
+.card_details .card_info {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+@media screen and (min-width: 768px) {
+  .bank_card {
+    width: 450px;
+  }
+  .card_number {
+    font-size: 1.85rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+}
+@media screen and (min-width: 1280px) {
+}
+@media screen and (min-width: 1536px) {
+}
